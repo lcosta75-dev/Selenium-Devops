@@ -1,7 +1,8 @@
-name: Testes Regressivos - PR
+name: Testes Regressivos - Agendados
+
 on:
-  pull_request:
-    branches: [ master ]
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
   RunTest:
@@ -50,8 +51,8 @@ jobs:
           SLACK_CHANNELL: testes-github-devops
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://www.pngall.com/wp-content/uploads/2016/07/Success-PNG-Image.png
-          SLACK_MESSAGE: 'Testes do PR executado com sucesso! :white_check_mark:'
-          SLACK_TITLE: 'Testes do PR executado com sucesso! :white_check_mark:'
+          SLACK_MESSAGE: 'Teste AGENDADO executado com sucesso! :white_check_mark:'
+          SLACK_TITLE: 'Teste AGENDADO executado com sucesso! :white_check_mark:'
           SLACK_USERNAME: SUCESSO
 
       - name: Enviar Notificação Slack - Falha
@@ -62,6 +63,6 @@ jobs:
           SLACK_CHANNELL: testes-github-devops
           SLACK_COLOR: ${{ job.status }}
           SLACK_ICON: https://w7.pngwing.com/pngs/349/105/png-transparent-false-error-missing-absent-x-red-cross-letter-circle-gui.png
-          SLACK_MESSAGE: 'Erro ao executar testes do PR ! :fire:'
-          SLACK_TITLE: 'Erro ao executar testes do PR! :fire:'
+          SLACK_MESSAGE: 'Erro ao executar testes  AGENDADOS! :fire:'
+          SLACK_TITLE: 'Erro ao executar testes  AGENDADOS! :fire:'
           SLACK_USERNAME: ERRO
