@@ -1,4 +1,4 @@
-name: Testes Regressivos
+name: Testes Regressivos - Agendados
 
 on:
   schedule:

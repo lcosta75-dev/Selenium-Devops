@@ -1,4 +1,4 @@
-name: Testes Regressivos
+name: Testes Regressivos - PR
 
 on:
   pull_request:
