@@ -1,5 +1,4 @@
 name: Testes Regressivos - PR
-
 on:
   pull_request:
     branches: [ master ]
